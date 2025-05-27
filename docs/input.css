@@ -1,0 +1,14 @@
+/* src/input.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './custom.css';
+
+.title-style {
+  @apply text-[1.8rem] mt-8 mb-4 font-bold text-[rgb(42,77,125)];
+}
+
+.paragraph-style {
+  @apply mb-6 text-[1.1rem] leading-relaxed text-[rgb(0,59,74)];
+}

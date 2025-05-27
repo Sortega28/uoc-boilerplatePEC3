@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jornadas Economía Circular</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png" />
+</head>
+<body class="bg-background text-text font-lato min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow-custom z-50 h-[105px]">
+    <div class="container mx-auto h-full flex justify-between items-center px-4 lg:px-16">
+      <a href="index.html" class="block">
+        <img src="./assets/images/logo.svg" alt="Logo Economia Circular" width="150" height="100" class="object-contain" />
+      </a>
+
+      <!-- Botón hamburguesa -->
+      <include src="components/menu-toggle.html"></include>
+
+      <!-- Navegación -->
+      <include src="components/nav.html"></include>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="home flex-1 flex flex-col pt-[105px]">
+    <section
+      class="poster relative flex justify-center items-center bg-cover bg-center h-[calc(100vh-105px)]"
+      style="background-image: url('./assets/images/poster-image-home.jpg');"
+    >
+      <div class="absolute inset-0 bg-[#043201bf]"></div>
+      <div class="poster-content relative z-10 text-center text-logo px-6 max-w-3xl">
+        <h1 class="text-4xl mb-4 font-noto text-white">¡Bienvenidos a las Jornadas de Economía Circular!</h1>
+        <p class="text-xl mb-6 text-white">Descubre un mundo de sostenibilidad y economía circular en nuestro evento anual.</p>
+        <a
+          href="articulo.html"
+          class="inline-block bg-primary text-white font-bold py-3 px-6 rounded-md transition duration-300 hover:bg-primary-dark focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary-dark active:scale-95"
+        >Leer más</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-footer-bg text-footer-text py-8 mt-auto">
+    <div class="container mx-auto flex flex-col items-center text-center gap-4 md:flex-row md:justify-between md:items-center md:text-left px-4 lg:px-16">
+      <div>
+        <img src="./assets/images/logo2.svg" alt="Logo Economia Circular" width="80" height="50" class="object-contain mx-auto md:mx-0" />
+        <p class="mt-2">2025-2026 | Sara Ortega Poza</p>
+      </div>
+      <div class="footer-right flex flex-col items-center md:items-end">
+        <ul class="social flex gap-4">
+          <li>
+            <a href="#" title="Twitter">
+              <img src="./assets/images/twitter.svg" alt="Logo de Twitter" />
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Instagram">
+              <img src="./assets/images/instagram.svg" alt="Logo de Instagram" />
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Youtube">
+              <img src="./assets/images/youtube.svg" alt="Logo de Youtube" />
+            </a>
+          </li>
+        </ul>
+        <ul class="legal flex flex-col gap-2 mt-4 md:flex-row md:gap-4 md:mt-0">
+          <li><a href="#" class="transition duration-300 hover:text-link-hover">Política de privacidad</a></li>
+          <li><a href="#" class="transition duration-300 hover:text-link-hover">Política de <i lang="en">cookies</i></a></li>
+          <li><a href="#" class="transition duration-300 hover:text-link-hover">Aviso legal</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script type="module" src="./assets/scripts/main.js" defer></script>
+</body>
+</html>
