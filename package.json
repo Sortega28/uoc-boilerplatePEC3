@@ -4,14 +4,18 @@
   "private": true,
   "description": "Boilerplate for Advanced HTML/CSS Tools UOC students",
   "scripts": {
-    "tailwind:build": "tailwindcss -i ./docs/input.css -o ./docs/style.css",
-    "tailwind:watch": "tailwindcss -i ./docs/input.css -o ./docs/style.css --watch",
-    "clean": "rimraf dist .cache .cache-loader .parcel-cache",
-    "parcel:serve": "parcel docs/index.html -p 8123 --open",
-    "parcel:build": "parcel build docs/index.html --no-source-maps",
-    "dev": "npm-run-all clean -p tailwind:watch parcel:serve",
-    "build": "npm-run-all clean tailwind:build parcel:build"
-  },
+  "clean": "rimraf dist .cache .cache-loader .parcel-cache",
+  "tailwind:build": "tailwindcss -i ./docs/input.css -o ./docs/style.css",
+  "tailwind:watch": "tailwindcss -i ./docs/input.css -o ./docs/style.css --watch",
+  "parcel:serve": "parcel docs/index.html -p 8123 --open",
+  "parcel:build": "parcel build docs/index.html --no-source-maps",
+  "posthtml:index": "posthtml docs/index.html -o docs/index.html",
+  "posthtml:articulo": "posthtml docs/articulo.html -o docs/articulo.html",
+  "posthtml": "npm-run-all posthtml:index posthtml:articulo",
+  "dev": "npm-run-all clean -p tailwind:watch parcel:serve",
+  "build": "npm-run-all clean tailwind:build parcel:build posthtml"
+}
+,
   "targets": {
     "web": {
       "context": "browser",
@@ -43,10 +47,13 @@
     "parcel": "^2.13.3",
     "postcss": "^8.5.3",
     "postcss-preset-env": "^10.1.3",
+    "posthtml": "^0.16.6",
+    "posthtml-cli": "^0.10.0",
     "posthtml-include": "^2.0.1",
     "rimraf": "^6.0.1",
     "sharp": "^0.33.5",
-    "tailwindcss": "3.3.2"
+    "tailwindcss": "3.3.2",
+    "vite": "^6.3.5"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.10",

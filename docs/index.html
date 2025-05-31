@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jornadas Economía Circular</title>
-  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png" />
-  <link rel="stylesheet" href='./style.css'>
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
 </head>
 <body class="bg-background text-text font-lato min-h-screen flex flex-col">
 
@@ -13,31 +12,35 @@
   <header class="fixed top-0 left-0 w-full bg-white shadow-custom z-50 h-[105px]">
     <div class="container mx-auto h-full flex justify-between items-center px-4 lg:px-16">
       <a href="index.html" class="block">
-        <img src="./assets/images/logo.svg" alt="Logo Economia Circular" width="150" height="100" class="object-contain" />
+        <img src="./assets/images/logo.svg" alt="Logo Economia Circular" width="150" height="100" class="object-contain">
       </a>
 
       <!-- Botón hamburguesa -->
-      <include src="components/menu-toggle.html"></include>
+      <button id="menu-toggle" class="menu-toggle flex flex-col gap-1 p-2 md:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+  <span class="block w-6 h-0.5 bg-primary-dark"></span>
+  <span class="block w-6 h-0.5 bg-primary-dark"></span>
+  <span class="block w-6 h-0.5 bg-primary-dark"></span>
+</button>
+
 
       <!-- Navegación -->
-      <include src="components/nav.html"></include>
+      <nav id="mobile-menu" class="md:flex md:space-x-6 uppercase font-bold text-primary-dark flex-col md:flex-row bg-white md:bg-transparent fixed top-[105px] left-0 w-full md:static md:w-auto max-h-0 md:max-h-none overflow-hidden md:overflow-visible transition-[max-height] duration-300 ease-in-out z-40 hidden md:block" aria-hidden="true">
+  <a href="index.html" class="block py-4 px-6 md:py-0 md:px-0 hover:text-link-hover focus:outline-none focus:ring-2 focus:ring-primary-dark">Inicio</a>
+  <a href="articulo.html" class="block py-4 px-6 md:py-0 md:px-0 hover:text-link-hover focus:outline-none focus:ring-2 focus:ring-primary-dark">Artículo</a>
+  <a href="#" class="block py-4 px-6 md:py-0 md:px-0 hover:text-link-hover focus:outline-none focus:ring-2 focus:ring-primary-dark">Contacto</a>
+</nav>
+
     </div>
   </header>
 
   <!-- MAIN -->
   <main class="home flex-1 flex flex-col pt-[105px]">
-    <section
-      class="poster relative flex justify-center items-center bg-cover bg-center h-[calc(100vh-105px)]"
-      style="background-image: url('./assets/images/poster-image-home.jpg');"
-    >
+    <section class="poster relative flex justify-center items-center bg-cover bg-center h-[calc(100vh-105px)]" style="background-image: url('./assets/images/poster-image-home.jpg');">
       <div class="absolute inset-0 bg-[#043201bf]"></div>
       <div class="poster-content relative z-10 text-center text-logo px-6 max-w-3xl">
         <h1 class="text-4xl mb-4 font-noto text-white">¡Bienvenidos a las Jornadas de Economía Circular!</h1>
         <p class="text-xl mb-6 text-white">Descubre un mundo de sostenibilidad y economía circular en nuestro evento anual.</p>
-        <a
-          href="articulo.html"
-          class="inline-block bg-primary text-white font-bold py-3 px-6 rounded-md transition duration-300 hover:bg-primary-dark focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary-dark active:scale-95"
-        >Leer más</a>
+        <a href="articulo.html" class="inline-block bg-primary text-white font-bold py-3 px-6 rounded-md transition duration-300 hover:bg-primary-dark focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary-dark active:scale-95">Leer más</a>
       </div>
     </section>
   </main>
@@ -46,24 +49,24 @@
   <footer class="bg-footer-bg text-footer-text py-8 mt-auto">
     <div class="container mx-auto flex flex-col items-center text-center gap-4 md:flex-row md:justify-between md:items-center md:text-left px-4 lg:px-16">
       <div>
-        <img src="./assets/images/logo2.svg" alt="Logo Economia Circular" width="80" height="50" class="object-contain mx-auto md:mx-0" />
+        <img src="./assets/images/logo2.svg" alt="Logo Economia Circular" width="80" height="50" class="object-contain mx-auto md:mx-0">
         <p class="mt-2">2025-2026 | Sara Ortega Poza</p>
       </div>
       <div class="footer-right flex flex-col items-center md:items-end">
         <ul class="social flex gap-4">
           <li>
             <a href="#" title="Twitter">
-              <img src="./assets/images/twitter.svg" alt="Logo de Twitter" />
+              <img src="./assets/images/twitter.svg" alt="Logo de Twitter">
             </a>
           </li>
           <li>
             <a href="#" title="Instagram">
-              <img src="./assets/images/instagram.svg" alt="Logo de Instagram" />
+              <img src="./assets/images/instagram.svg" alt="Logo de Instagram">
             </a>
           </li>
           <li>
             <a href="#" title="Youtube">
-              <img src="./assets/images/youtube.svg" alt="Logo de Youtube" />
+              <img src="./assets/images/youtube.svg" alt="Logo de Youtube">
             </a>
           </li>
         </ul>
@@ -77,6 +80,6 @@
   </footer>
 
   <!-- JS -->
-  <script type="module" src="./assets/scripts/main.js" defer></script>
+  <script type="module" src="./assets/scripts/main.js" defer=""></script>
 </body>
 </html>
